@@ -51,7 +51,7 @@ border: none;
 .profile__edit-btn:hover {
  opacity: 100%;
 }
-.profile__edit-btn_img {
+.profile__edit-btn img {
   margin-right: 6px;
 }
 
@@ -68,7 +68,7 @@ border: none;
 .profile__add-btn:hover {
   opacity: 80%;
 }
-.profile__add-btn_plus {
+.profile__add-btn img {
   margin-right: 6px;
 }
 @media screen and (max-width: 627px) {
