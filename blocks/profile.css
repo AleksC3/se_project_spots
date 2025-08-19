@@ -75,7 +75,7 @@ border: none;
   }
 
 .profile__avatar {
-   weight: 80px;
+   width: 80px;
    height: 80px;
    margin-bottom: 12px;
    margin-right: 0;
