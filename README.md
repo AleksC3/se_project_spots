@@ -38,4 +38,6 @@ This project is made so all the elements are displayed correctly on popular scre
   This webpage is deployed to GitHub pages
   [deployment link](https://aleksc3.github.io/se_project_spots/)
 
+  Here is a link to a video about the project: https://drive.google.com/file/d/1sYPfJkL1nQHCMn4QTsDoMRaSXZZKPRC8/view?usp=sharing
+
 
