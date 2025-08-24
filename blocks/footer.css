@@ -1,6 +1,9 @@
-.footer__image {
-   display: block;
-   margin: 0 auto;
-   width: 104px;
-   height: 16px;
+.footer__text {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 60px;
+  opacity: 70%;
+  font-weight: 400;
+  text-align: center;
 }
