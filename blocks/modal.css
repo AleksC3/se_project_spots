@@ -11,7 +11,7 @@
   align-items: center;
   padding: 10px;
   opacity: 0;
-  transition: opacity 200ms linear;
+  transition: opacity 200ms linear, visibility 0ms linear 200ms;
 }
 
 .modal_is-opened {
@@ -36,6 +36,7 @@
   background: none;
   border: none;
   opacity: 40%;
+  cursor: pointer;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -54,14 +55,13 @@
 .modal__input {
   display: block;
   margin: 8px 0 0;
-  width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   padding: 10px;
   font-weight: 500;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  color: #2121214d, 100%;
+  color: #2121214d;
   width: calc(100% - 20px);
 }
 .modal__input::placeholder {
@@ -74,7 +74,9 @@
   color: #fcf5e5;
   border-radius: 6px;
   padding: 18px 58px;
+  cursor: pointer;
 }
+.modal__submit-btn: hover;
 
 @media screen and (max-width: 630px) {
   .modal {
