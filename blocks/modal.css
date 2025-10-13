@@ -11,7 +11,7 @@
   align-items: center;
   padding: 10px;
   opacity: 0;
-  transition: opacity 200ms linear, visibility 0ms linear 200ms;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 .modal_is-opened {
@@ -29,15 +29,16 @@
   box-sizing: border-box;
 }
 .modal__close-btn {
+  background: url("../images/X exit.svg");
   position: absolute;
   width: 40px;
   height: 40px;
   top: 32px;
   right: 50px;
-  background: none;
   border: none;
   opacity: 40%;
   cursor: pointer;
+  background-size: 100%;
 }
 .modal__close-btn:hover {
   opacity: 100%;
@@ -61,7 +62,7 @@
   margin: 8px 0 0;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 6px;
-  padding: 10px;
+  padding: 16px 12px 16px;
   font-weight: 500;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
@@ -92,11 +93,22 @@
   opacity: 80%;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 620px) {
   .modal__container {
-    width: calc(100% - 20px);
+    padding: 12px;
+  }
+  .modal__title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .modal__input {
+    font-size: 16px;
+  }
+  .modal__submit-btn {
     max-width: none;
-    margin: 0 auto;
-    padding: 16px 10px;
+  }
+  .modal__close-btn {
+    top: 12px;
+    right: 12px;
   }
 }
