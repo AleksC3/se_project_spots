@@ -76,9 +76,6 @@ function getCardElement(data) {
     previewImageEl.alt = data.name;
     openModal(previewModal);
   });
-  previewModalCloseBtn.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
 
   const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
   cardLikeBtnEl.addEventListener("click", () => {
@@ -88,7 +85,6 @@ function getCardElement(data) {
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
   cardDeleteBtnEl.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   return cardElement;
@@ -116,6 +112,9 @@ newPostBtn.addEventListener("click", function () {
 });
 newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
+});
+previewModalCloseBtn.addEventListener("click", () => {
+  closeModal(previewModal);
 });
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
