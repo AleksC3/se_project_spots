@@ -152,6 +152,10 @@
   opacity: 0.8;
 }
 
+.modal__submit_btn_disabled {
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 620px) {
   .modal__container {
     padding: 12px;
