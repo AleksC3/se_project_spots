@@ -1,4 +1,3 @@
-import { enableValidation, resetValidation, settings } from "./validation.js";
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -62,6 +61,8 @@ const cardsTemplate = document
   .content.querySelector(".card");
 
 const cardsList = document.querySelector(".cards__list");
+
+enableValidation(settings);
 
 function getCardElement(data) {
   const cardElement = cardsTemplate.cloneNode(true);
@@ -161,7 +162,13 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   addCardFormElement.reset();
-  disableButton(cardSubmitBtn, settings);
+
+  resetValidation(
+    addCardFormElement,
+    [cardImageInput, cardCaptionInput],
+    settings
+  );
+
   closeModal(newPostModal);
 }
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
