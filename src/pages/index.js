@@ -1,3 +1,16 @@
+import "../pages/index.css";
+
+import {
+  enableValidation,
+  resetValidation,
+  validationConfig,
+} from "../scripts/validation.js";
+
+import logoImage from "../images/logo.svg";
+import avatarImage from "../images/avatar.jpg";
+import pencilIcon from "../images/Pencil.svg";
+import plusIcon from "../images/plus.svg";
+
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -29,6 +42,12 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+document.querySelector(".header__logo").src = logoImage;
+document.querySelector(".profile__avatar").src = avatarImage;
+document.querySelector(".profile__edit-icon").src = pencilIcon;
+document.querySelector(".profile__add-icon").src = plusIcon;
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -61,8 +80,6 @@ const cardsTemplate = document
   .content.querySelector(".card");
 
 const cardsList = document.querySelector(".cards__list");
-
-enableValidation(settings);
 
 function getCardElement(data) {
   const cardElement = cardsTemplate.cloneNode(true);
@@ -126,7 +143,7 @@ editProfileBtn.addEventListener("click", function () {
   resetValidation(
     editProfileForm,
     [editProfileNameInput, editProfileDescriptionInput],
-    settings
+    validationConfig
   );
   openModal(editProfileModal);
 });
@@ -166,7 +183,7 @@ function handleAddCardSubmit(evt) {
   resetValidation(
     addCardFormElement,
     [cardImageInput, cardCaptionInput],
-    settings
+    validationConfig
   );
 
   closeModal(newPostModal);
@@ -177,3 +194,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+enableValidation(validationConfig);

@@ -6,24 +6,17 @@
     <meta name="description" content="Spots" />
     <meta name="Aleks" content="author" />
     <meta name="keywords" content="HTML, CSS" />
-    <link rel="stylesheet" href="./pages/index.css" />
-
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots logo" class="header__logo" />
+        <img alt="Spots logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/avatar.jpg"
-            alt="Bessie Coleman photo"
-            class="profile__avatar"
-          />
+          <img alt="Bessie Coleman photo" class="profile__avatar" />
           <div class="profile__column">
             <h1 class="profile__name">
               Aliaune Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara Akon
@@ -35,19 +28,11 @@
               in modern world...
             </p>
             <button type="button" class="profile__edit-btn">
-              <img
-                class="profile__edit-icon"
-                src="./images/Pencil.svg"
-                alt="pencil icon"
-              />Edit Profile
+              <img class="profile__edit-icon" alt="pencil icon" />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img
-              class="profile__add-icon"
-              src="./images/plus.svg"
-              alt="Plus icon"
-            />New Post
+            <img class="profile__add-icon" alt="Plus icon" />New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -55,7 +40,7 @@
             <template id="cards-template">
               <li class="card">
                 <button type="button" class="card__delete-btn"></button>
-                <img src="#" alt="" class="card__image" />
+                <img alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-btn"></button>
@@ -153,7 +138,5 @@
         <p class="modal__caption"></p>
       </div>
     </div>
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>
